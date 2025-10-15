@@ -99,14 +99,7 @@ class CafeDetailViewController: UITableViewController {
                 cell.accessoryType = .disclosureIndicator
                 cell.selectionStyle = .default
             }
-            
-            /*
-             Creates an embedded map view if coordinates exist
-             Adds a pin at the café location
-             Sets zoom level (0.01 = very zoomed in)
-             Disables interaction (can't pan/zoom within the cell)
-             Uses Auto Layout to pin the map to all edges with 200pt height
-             */
+        
             
         case (3, 0):
             if let coordinate = cafe.coordinate {
@@ -128,7 +121,7 @@ class CafeDetailViewController: UITableViewController {
                     center: coordinate,
                     span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
                 )
-                mapView.setRegion(region, animated: false)
+                mapView.setRegion(region, animated: true)
                 
                 cell.contentView.addSubview(mapView)
                 NSLayoutConstraint.activate([
