@@ -1,4 +1,4 @@
-# ☕ cafeCRUD
+# ☕ Cafe Diaries
 
 ### A tiny, friendly Swift demo app for café enthusiasts to track their café adventures
 
